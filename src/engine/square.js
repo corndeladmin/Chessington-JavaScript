@@ -9,7 +9,11 @@ export default class Square {
     }
 
     equals(otherSquare) {
-        return !!otherSquare && this.row === otherSquare.row && this.col === otherSquare.col;
+        return (
+            !!otherSquare &&
+            this.row === otherSquare.row &&
+            this.col === otherSquare.col
+        );
     }
 
     toString() {

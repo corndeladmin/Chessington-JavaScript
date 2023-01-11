@@ -5,22 +5,36 @@
   "main": "src/index.js",
   "scripts": {
     "clean": "del-cli dist/**/* logs/*",
-    "bundle": "webpack",
-    "build": "npm run clean && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files && npm run bundle",
-    "start": "npm run build && node dist/index.js",
-    "test": "mocha --compilers js:babel-core/register \"./tests/**/*.spec.js\""
+    "bundle": "NODE_ENV=production webpack",
+    "build": "npm run clean && npm run bundle",
+    "start": "NODE_ENV=production webpack serve",
+    "test": "NODE_ENV=test mocha \"./tests/**/*.spec.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^9.1.2",
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
-    "del-cli": "^1.1.0",
-    "mocha": "^4.0.1",
-    "webpack": "^3.6.0"
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.27.1",
+    "del-cli": "^5.0.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.20.7",
     "express": "^4.16.1"
   }
 }

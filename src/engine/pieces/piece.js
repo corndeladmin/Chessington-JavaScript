@@ -4,7 +4,9 @@ export default class Piece {
     }
 
     getAvailableMoves(board) {
-        throw new Error('This method must be implemented, and return a list of available moves');
+        throw new Error(
+            "This method must be implemented, and return a list of available moves",
+        );
     }
 
     moveTo(board, newSquare) {

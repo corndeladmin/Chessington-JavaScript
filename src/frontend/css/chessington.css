@@ -5,3 +5,18 @@
 #turn-status {
     font-size: 20px;
 }
+
+.square-highlight:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    margin:auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    height: 25%;
+    width: 25%;
+    background-color: blue;
+}

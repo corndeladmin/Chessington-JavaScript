@@ -1,6 +1,6 @@
-import Player from '../player';
-import Square from '../square';
-import Piece from './piece';
+import Player from "../player";
+import Square from "../square";
+import Piece from "./piece";
 
 export default class Pawn extends Piece {
     constructor(player) {
@@ -8,11 +8,11 @@ export default class Pawn extends Piece {
     }
 
     getAvailableMoves(board) {
-        let location = board.findPiece(this)
+        let location = board.findPiece(this);
         if (this.player === Player.WHITE) {
-            return Square.at(location.row + 1, location.col)
+            return [Square.at(location.row + 1, location.col)];
         } else {
-            return Square.at(location.row - 1, location.col)
+            return [Square.at(location.row - 1, location.col)];
         }
     }
 }
