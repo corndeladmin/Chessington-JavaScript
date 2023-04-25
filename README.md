@@ -1,8 +1,6 @@
 # Chessington
 
-1. Fork this repo
-    * Go to this repo's GitHub page ({url here})
-    * Click `Fork` in the top-right of the page - this will create a copy of this repo in **your own GitHub account**
+1. Fork this repo: click `Fork` in the top-right of the page - this will create a copy of this repo in **your own GitHub account**
 
 2. Clone (download) the repo
     * Go to your newly-created fork of the repo (on GitHub).
@@ -12,7 +10,7 @@
     Your trainer will able to help you with this.
 
 3. "Cloning the repo" will create a folder on your computer with the files from this repo.  
-Open this folder in IntelliJ / Visual Studio Code.
+Open this folder in Visual Studio Code.
 
 4. Open a command-prompt in this same folder.  
 Your trainer can show you how to do this, if you need any help.
@@ -20,11 +18,10 @@ Your trainer can show you how to do this, if you need any help.
 5. Run this command to set up the necessary dependencies:  
 `npm install`
 
-6. Run this command to run your code:  
+6. Run this command to run your code on a webserver at `localhost:3000`:  
 `npm start`
-This will start a webserver at `localhost:3000`
 
-7. Run this command to run the tests:  
+6. Run this command to run the tests:  
 `npm test`
 
 
