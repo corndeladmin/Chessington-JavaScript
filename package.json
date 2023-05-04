@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "clean": "del-cli dist/**/* logs/*",
-    "bundle": "NODE_ENV=production webpack",
+    "bundle": "SET NODE_ENV=production && webpack",
     "build": "npm run clean && npm run bundle",
-    "start": "NODE_ENV=production webpack serve",
-    "test": "NODE_ENV=test mocha \"./tests/**/*.spec.js\""
+    "start": "SET NODE_ENV=production && webpack serve",
+    "test": "SET NODE_ENV=test && mocha \"./tests/**/*.spec.js\""
   },
   "author": "",
   "license": "ISC",
